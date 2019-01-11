@@ -12,12 +12,12 @@ var_dump($classifier->predict([3, 2]));
 // return 'b'
 
 
-$samples = [[12],[14],[17],[19],[22],[28]];
-$target = [3.1,3.2,3.5,3.7,4.1,5];
+$samples = [[10],[15],[18],[19],[22],[30]];
+$target = [3,5,6,12,19,30];
 
 $regression = new Phpml\Regression\LeastSquares();
 
 $regression->train($samples,$target);
 
-$res = $regression->predict([35]);
+$res = $regression->predict([40]);
 var_dump ($res);
